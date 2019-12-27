@@ -1,0 +1,305 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{breakcites}
+\usepackage{lineno}
+
+
+
+
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+
+
+\usepackage{natbib}
+
+
+
+
+\renewenvironment{abstract}
+  {{\bfseries\noindent{\abstractname}\par\nobreak}\footnotesize}
+  {\bigskip}
+
+\renewenvironment{quote}
+  {\begin{tabular}{|p{13cm}}}
+  {\end{tabular}}
+
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1.5}{0pt}
+
+
+\usepackage{authblk}
+
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,ngerman,english]{babel}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\title{PREreview of bioRxiv article ``Structure-function analysis of ZAR1
+immune receptor reveals key molecular interactions for activity''}
+
+
+
+\author[1]{Sophien Kamoun}%
+\affil[1]{The Sainsbury Laboratory}%
+
+
+\vspace{-1em}
+
+
+
+  \date{\today}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+
+
+
+
+
+\selectlanguage{english}
+\begin{abstract}
+This is a review of Baudin, Schreiber, Martin et al. bioRxiv
+doi:~\url{https://doi.org/10.1101/592824} posted on March 29, 2019. The
+authors used structural modelling to identify elements required for
+self-association of the NLR immune receptor ZAR1, specifically its
+N-terminal CC-domain ZAR1CC. They discovered that the N-terminal \selectlanguage{greek}α\selectlanguage{english}1
+helix and EDVID motif in ZAR1CC are important for oligomerization and
+function of ZAR1. This complements recent findings by Wang et al. (2019)
+based on cryo-EM structures, highlighting the importance of the \selectlanguage{greek}α\selectlanguage{english}1 helix
+for the activity of ZAR1 although some differences were noted that could
+reflect the different experimental set ups (CC domain vs full-length
+protein) as discussed in the paper.%
+\end{abstract}%
+
+
+
+
+\section*{Summary}
+
+{\label{631475}}
+
+In this paper, Baudin, Schreiber, Martin et al. used structural
+modelling to identify structural elements required for the
+self-association of the NLR immune receptor ZAR1, specifically its
+N-terminal CC-domain ZAR1CC. They used monomeric and dimeric forms of CC
+domain structure templates available at the time to make ZAR1CC models
+and tried to map the region involved / responsible for oligomerization.
+They discovered that the N-terminal \selectlanguage{greek}α\selectlanguage{english}1 helix and EDVID motif in ZAR1CC
+are important for oligomerization and function of ZAR1. This complements
+recent findings by Wang et al. (2019)~\hyperref[csl:1]{(Wang et al., 2019}; \hyperref[csl:2]{Wang et al., 2019)} based on
+cryo-EM structures, highlighting the importance of \selectlanguage{greek}α\selectlanguage{english}1 helix for the
+activity of ZAR1 although some differences were noted that could reflect
+the different experimental set ups (CC domain vs full-length protein) as
+discussed in the paper.~
+
+~
+
+They also identified intramolecular interactions between ZAR1
+subdomains, notably NB-ARC with CC domain, that keep ZAR1 in an inactive
+state. They also demonstrated that loss of function mutants in NB-ARC
+domain do not play a role in interaction with NB-ARC and suppression of
+ZAR1CC autoactivity.
+
+~
+
+We believe that this is a nice study that identifies structural elements
+responsible for CC self-association and is overall consistent with
+recent structural findings. The set of interaction assays are important
+to complement the recent findings of ZAR1 cryo-EM structure in inactive
+and active states. However, in this study, the biological relevance of
+the NB-ARC/LRR domains in negative regulation of ZAR1 by binding to CC
+domain is not clear. Detailed comparison between binding affinity of
+NB-ARC/LRR to CC and the CC-mediated cell death is required for a firm
+conclusion that intramolecular interactions between ZAR1 subdomains
+participate in keeping ZAR1 immune complexes inactive.
+
+\section*{Main comments}
+
+{\label{538864}}
+
+\textbf{Results section - Model-based identification of ZAR1CC
+structural determinants for oligomerization}
+
+They describe two homology models of ZAR1CC based on MLA10 and Rx/Sr33
+structures to understand structural dynamics that lead to
+oligomerization. We feel that some statements in this section are not
+clear and need further explanation. For example
+
+1)~~~ Lines 161-163 They should show superimposition of the two models
+in Fig 1 highlighting \selectlanguage{greek}α\selectlanguage{english}1 and \selectlanguage{greek}α\selectlanguage{english}4 helices to support their statement. Also
+explain how t1 and t3 region are critical for oligomerisation
+
+2)~~~ Lines 169-171 They say that ZAR1CCH1 was designed to reduce the
+probability of favourable transient charge-charge interactions between
+the two monomers. It is not clear how this version can reduce
+interactions between two monomers. Most of the residues (78, 85, 89, 91)
+in Fig S1C seem exposed to the surface and not interacting to the other
+monomer.
+
+3)~~~ They should explain why they chose to mutate most of the residues
+to glutamine and some to alanine.
+
+\par\null
+
+\textbf{Results section - Impact of ZAR1CC architecture on its activity}
+
+Lines 215-219. They report that ZAR1CC variants migrate to slightly
+different sizes (Fig S2) which could be due to post translational
+modifications (PTMs). Do they have any hints about potential PTMs?
+Interestingly mutants in full length ZAR1 don't migrate at different
+sizes (Fig2 D). Does PTM occurs only when CC domain is expressed or
+exposed?
+
+In Figure 2C, they should show the leaf pictures, similar to Figure 2A.
+
+\par\null
+
+\textbf{Results section - Autoactivity of ZAR1CC-YFP is inhibited by the
+ZAR1NBARC domain}
+
+In Figure 3B, they should use CC domain of At5g48620 as a negative
+control in the co-IP assay, to be consistent with the yeast two-hybrid
+assay (Figure 3A).
+
+In Figure 3B, it is better to show the loading control.
+
+In Figure 3C, they should show the leaf pictures, similar to Figure 2A.
+
+\par\null
+
+\textbf{Results section - Effect of loss- and gain-of-function mutations
+on the ZAR1NBARC domain}
+
+They tried to make autoactive mutants of ZAR1 based on literature.
+AtZAR1G194E/K195A, AtZAR1D268E~and AtZAR1D489V. However, these mutants
+did not cause HR. This might be explained by the possibility that
+\emph{Nicotiana benthamiana} endogenous RLCKs are not compatible with
+Arabidopsis ZAR1. Can they test cell death inducing activity by
+co-expressing AtZAR1G194E/K195A, AtZAR1D268E~and AtZAR1D489V~mutants
+with Arabidopsis ZED1 in \emph{N. benthamiana}?
+
+They could also test the autoactive mutants by
+agroinfiltration/trangsenics in Arabidopsis. See for example
+\selectlanguage{ngerman}\hyperref[csl:3]{(Wróblewski et al., 2018)}.
+
+In Figure 4C, are there any differences between ZAR1CC-NBD mutants
+(K195N, V202M, S291N) and ZAR1CC-NBD, ZAR1CC-NBDHD1 mutant (P359L) and
+ZAR1CC-NBDHD1, ZAR1CC-NBARC mutant (L465F) and ZAR1CC-NBARC,
+respectively? There seems to be differences between Fig 4C with Fig 3C
+for the reported loss-of-function mutations.
+
+In Figure 4B, it is better to show the loading control.
+
+In Figure 4C, they should show the leaf pictures.
+
+\par\null
+
+\textbf{Results section - Interaction between the NBARC and LRR domains}
+
+How does the association between NB-ARC and LRR subdomains contribute to
+the negative regulation of the CC domain function? Does P816Q mutation
+affect the activities of full-length ZAR1?
+
+In Figure 5, it is better to show the loading control.
+
+\par\null
+
+\textbf{Results section - Structure-informed analysis of ZAR1CC
+intramolecular associations}
+
+They found that ZAR1CCH1, ~ZAR1CCH2a, ~ZAR1CCH2b and ZAR1CCED ~mutants
+do not bind ZAR1NBARC and ZAR1LRR. In Fig 1 and 2, the authors showed
+that the same mutants are reduced in homo-association and lost cell
+death activity when fused to the C-terminal YFP tag. Please discuss how
+the mutation sites contribute to the intra- and inter-molecular
+associations and cell death.
+
+\section*{}
+
+{\label{584260}}
+
+\section*{Editorial Comments}
+
+{\label{584260}}
+
+Line 139 ``recently solved crystal structures of ZAR1'' should be
+``recently solved cryo-EM structures of ZAR1''.
+
+Mis labelling in Supp Fig 1B of monomer (1CC\selectlanguage{greek}α\selectlanguage{english}4, \selectlanguage{greek}α\selectlanguage{english}2 is mis-labelled as
+\selectlanguage{greek}α\selectlanguage{english}1).
+
+Typo error in Fig S4. `At3g4660' should be `At3g46600'.
+
+Typo error in Fig 3 and Fig S5. `At3g4660' should be `At3g46600'.
+
+\par\null
+
+\section*{Reviewers}
+
+{\label{194638}}
+
+Abbas Maqbool, Hiroaki Adachi and Sophien Kamoun. The Sainsbury
+Laboratory, Norwich Research Park, University of East Anglia, Norwich,
+UK.
+
+\selectlanguage{english}
+\FloatBarrier
+\section*{References}\sloppy
+\phantomsection
+\label{csl:2}Wang, J., Hu, M., Wang, J., Qi, J., Han, Z., Wang, G., … Chai, J. (2019). {Reconstitution and structure of a plant NLR resistosome conferring immunity.}. \textit{Science}, \textit{364}.
+
+\phantomsection
+\label{csl:1}Wang, J., Wang, J., Hu, M., Wu, S., Qi, J., Wang, G., … Chai, J. (2019). {Ligand-triggered allosteric ADP release primes a plant NLR complex.}. \textit{Science}, \textit{364}.
+
+\phantomsection
+\label{csl:3}Wróblewski, T., Spiridon, L., Martin, E. C., Petrescu, A. J., Cavanaugh, K., Truco, M. J., … Takken, F. L. W. (2018). {Genome-wide functional analyses of plant coiled-coil NLR-type pathogen receptors reveal essential roles of their N-terminal domain in oligomerization, networking, and immunity.}. \textit{PLoS Biol}, \textit{16}, e2005821.
+
+\end{document}
+

@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 500px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/reproducible-research-theory-8-638/reproducible-research-theory-8-638.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/87737/articles/276726/master/file/figures/reproducible-research-theory-8-638/reproducible-research-theory-8-638.png"
+    folder_url: "/users/87737/articles/276726/master/folder/figures/reproducible-research-theory-8-638"

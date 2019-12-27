@@ -1,0 +1,302 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{breakcites}
+\usepackage{lineno}
+
+
+
+
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+
+
+\usepackage[round]{natbib}
+\let\cite\citep
+
+
+
+
+\renewenvironment{abstract}
+  {{\bfseries\noindent{\abstractname}\par\nobreak}\footnotesize}
+  {\bigskip}
+
+\renewenvironment{quote}
+  {\begin{tabular}{|p{13cm}}}
+  {\end{tabular}}
+
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1.5}{0pt}
+
+
+\usepackage{authblk}
+
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\title{Systems JC, OHSU - PREreview of ``Age-related decline in behavioral
+discrimination of amplitude~ modulation frequencies compared to
+envelope-following responses''}
+
+
+
+\author[1]{Daniela Saderi, Ph.D.}%
+\affil[1]{Oregon Health \& Science University}%
+
+
+\vspace{-1em}
+
+
+
+  \date{\today}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+
+
+
+
+
+\selectlanguage{english}
+\begin{abstract}
+This is a preprint journal club review of \textbf{``Age-related decline
+in behavioral discrimination of amplitude modulation frequencies
+compared to envelope-following responses''~}by Jesyn Lay, Edward L.
+Bartlett. The preprint was posted on bioRxiv on Sep 28, 2017 (DOI:
+\url{http://dx.doi.org/10.1101/193268}).
+
+\emph{\href{https://hearingbrain.org/systemsjournalclub.php}{Our group}
+reviewed this paper on October 13, 2017 and used the PREreview quick
+participant worksheet.}%
+\end{abstract}%
+
+
+
+
+\selectlanguage{english}
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.28\columnwidth]{figures/lbhb-logo-small/lbhb-logo-small}
+\caption{{\href{https://hearingbrain.org/systemsjournalclub.php}{Systems
+Neuroscience JC} - Oregon Health \& Science University
+{\label{267279}}%
+}}
+\end{center}
+\end{figure}
+
+Dear Authors,
+
+Thank you for posting this manuscript as a preprint on bioRxiv! We
+reviewed this work at our Systems Neuroscience journal club at OHSU.
+Compiled comments from the attendants are below. To structure the
+feedback used the quick worksheet guidelines published on PREreview. We
+hope this feedback will be useful to improve the manuscript.
+
+\emph{What is the main question the study attempts to answer?}
+
+This study attempts to establish a relation between significant decline
+of auditory neural responses measured by envelope following responses
+(EFRs) and perceptual deficits in detecting fast amplitude-modulated
+frequency sounds associated with age-related hearing loss in rats.
+
+\emph{What is (are) the hypothesis(es)?}
+
+The authors hypothesized that the well know decline in EFR in older rats
+in response to faster amplitude-modulated frequencies (AMF) is
+accompanied by a deficit in AM perception of those sounds.~~
+
+\emph{Why is this study relevant?}
+
+Human speech contains fast modulations in amplitude and frequency that
+are crucial for speech intelligibility. Age-related hearing loss in
+humans is associated with difficulty in understanding speech often as a
+consequence of poor temporal modulation coding. Understanding if the
+lower electrophysiological responses to fast AMF measured in aged rats
+are associated with behavioral deficits in the same animals is important
+to establish the link between humans and animal models of age-related
+hearing loss.
+
+\emph{What techniques/analyses do the researchers adopt to test their
+hypothesis(es)?}
+
+Behavioral tests:
+
+\begin{enumerate}
+\tightlist
+\item
+  Acoustic startle response (ASR) and inhibition of the startle reaction
+  using a prepulse (prepulse inhibition, PPI). The magnitude of the PPI
+  is proportional to the animal's sound detectability such as the
+  highest the PPI response, the \ldots{}
+\item
+  Pure tone detection behavior.
+\item
+  AMF discrimination task
+\end{enumerate}
+
+Electrophysiological measurements
+
+\begin{enumerate}
+\tightlist
+\item
+  Auditory evoked potentials as auditory brainstem responses (ABRs) and
+  envelop following responses (EFRs).
+\end{enumerate}
+
+\emph{Write here any specific comment you might have about experimental
+approaches and methods used in the study.}
+
+\emph{Write here any general comments you might have about the research
+approach.}
+
+\emph{Write here any specific comment/note about figures in the paper
+(this could be related to the way data are displayed and your ability to
+understand the results just by looking at the figures).}
+
+It would be useful to include a diagram of the behavioral paradigms to
+help readers understand how the experiment is set up.~
+
+In \textbf{Figure 1}, to make it clear where you measure the startle
+response and to show the actual shape of the measured response you could
+use figure 2 waveform of the startle response instead of the square
+pulse. We would recommend combining these figures into one figure,
+perhaps with two panels.
+
+\textbf{Figure 3}. It would be nice to show the psychometric functions
+as it looks like you would get a good one of the ASR magnitude but not
+for RMS ratio. This would show clearly that ASR magnitude measurements
+are a better way to measure behavioral thresholds (level at which there
+is no measurable change in startle response), key information to
+establish a link with human perceptual measurements. From now on, you
+could avoid showing the RMS ratio measurement in the main figures, and
+perhaps have them in the supplementary or report the statistics only in
+the text?
+
+\textbf{Table 1} is a bit confusing as it's hard to understand what the
+important part is. Could you for instance highlight relative to 75 the
+first level that has a significantly lower response?
+
+In \textbf{Figure 4} it would help to label that the change in AM
+frequency is related to the prepulse stimulus.
+
+\textbf{Figure 6} is very dense and hard to interpret. What are the
+matched waves? It's a bit confusing to understand what's going on
+because sometimes the response is even higher in the matched condition.
+Would it be useful to visualize the mean of the matched intensity.
+
+\textbf{Figure 7} is very interesting. Even after you equated the
+levels, you still got much less PPI in the older animals than in the
+younger. This would suggest that there is something happening at higher
+levels of auditory processing.
+
+In \textbf{Figure 8} for visualization purposes, it would be better if
+the solid solid line were the 100\% modulation depth. Additionally, to
+make the figure more clear you could remove the 25\% for young as you
+don't have that measurement in all conditions.~
+
+\textbf{Figure 9~}perhaps should be brought up in the preprint because
+if left at the end after the references it is not easily accessible to
+the reader. This figures attempts to compare behavioral results with
+electrophysiological measurements. The message of this figure is that
+the behavior of the animal changes more compared to the electorphy
+responses. However it is a bit hard to compare a ratio with a linear
+scale. Perhaps it would be easier to have one panel that shows the
+change with 100\% PPI and another with the change in EFR and compare
+between groups rather than comparing between measures?~
+
+One panel with change in 100\% PPI and another with change in EFR and
+then you compare between the groups rather than comparing between the
+measures? We did not understand what the baseline was. Did you try doing
+everything in a multiple linear regression? Does EFR predict PPI on
+individual level not for averages. PPI=a+b*EFR.~
+
+The relative change affects the behavior rather than the absolute
+repsonse? the 50\% depth and 100\% are similar in younger but
+performance looks quite different. It appears that the relative change
+in EFR does not predict the behavior. Is that correct?
+
+\emph{Write here any additional comment you might have (this includes
+minor concerns such as typos and structure of the manuscript)}
+
+Introduction:
+
+\begin{itemize}
+\tightlist
+\item
+  I wonder if you need to go into such details to understand the circuit
+  in order to motivate the study. I would focus on stating the problem,
+  what's known about the problem, what is/are you hypothesis/es, and how
+  you are going to test it/them. Conclude the intro with a short
+  paragraph about your findings. Leave the description of the methods to
+  the method session. P
+\item
+  Perhaps it would be helpful to clarify the distinction between
+  previous findings in human and animal models. It could be important to
+  report any psychophysical evidence that supports how older humans have
+  harder time understanding fast speech. Additionally, you might want to
+  mention that the way that the startle response circuit is wired in
+  humans is different from the rat.~
+\end{itemize}
+
+\par\null\par\null
+
+
+
+
+
+
+
+\textbf{}
+
+\selectlanguage{english}
+\FloatBarrier
+\end{document}
+

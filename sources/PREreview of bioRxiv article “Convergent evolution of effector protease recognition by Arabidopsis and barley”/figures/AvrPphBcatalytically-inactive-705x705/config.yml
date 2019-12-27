@@ -1,0 +1,20 @@
+---
+version: 2
+multicolumn: false
+web-width: 500px
+align: center
+float: h!
+grid:
+  rows: 1
+  columns: 1
+  grid_elements:
+  - path: figures/AvrPphBcatalytically-inactive-705x705/AvrPphBcatalytically-inactive-705x705.png
+    type: static
+    from:
+    - 1
+    - 1
+    to:
+    - 1
+    - 1
+    url: "/users/234085/articles/320528/master/file/figures/AvrPphBcatalytically-inactive-705x705/AvrPphBcatalytically-inactive-705x705.png"
+    folder_url: "/users/234085/articles/320528/master/folder/figures/AvrPphBcatalytically-inactive-705x705"

@@ -1,0 +1,265 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage{breakcites}
+\usepackage{lineno}
+
+
+
+
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+}%
+\makeatother
+
+
+\usepackage[round]{natbib}
+\let\cite\citep
+
+
+
+
+\renewenvironment{abstract}
+  {{\bfseries\noindent{\abstractname}\par\nobreak}\footnotesize}
+  {\bigskip}
+
+\renewenvironment{quote}
+  {\begin{tabular}{|p{13cm}}}
+  {\end{tabular}}
+
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1.5}{0pt}
+
+
+\usepackage{authblk}
+
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\title{OIST E\&E PREreview JC ``Biodiversity trends are stronger in marine than
+terrestrial assemblages''}
+
+
+
+\author[1]{maggi brisbin}%
+\author[1]{Jigyasa Arora}%
+\author[1]{Yuka Suzuki}%
+\author[1]{Kun-Lung Li}%
+\author[1]{Jigyasa Arora}%
+\author[1]{Julian Katzke}%
+\affil[1]{Okinawa Institute of Science and Technology Graduate School}%
+
+
+\vspace{-1em}
+
+
+
+  \date{\today}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+
+
+
+
+
+
+
+
+
+\section*{Biodiversity trends are stronger in marine than terrestrial
+assemblages}
+
+{\label{196514}}
+
+Shane~Blowes,~Sarah~Supp,~Laura~Antao,~Amanda~Bates,~Helge~Bruelheide,~Jonathan~Chase,~Faye~Moyes,~Anne~Magurran,~Brian~McGill,~Isla~Myers-Smith,~Marten~Winter,~Anne~Bjorkman,~Diana~Bowler,~Jarrett
+EK~Byrnes,~Andrew~Gonzalez,~Jes~Hines,~Forest~Isbell,~Holly~Jones,~Laetitia~Navarro,~Patrick~Thompson,~Mark~Vellend,~Conor~Waldock,~Maria~Dornelas
+
+bioRxiv, October 30th, 2018
+
+doi:~\url{https://doi.org/10.1101/457424}
+
+\par\null
+
+\textbf{Overview and take-home messages:}
+
+Blowes~et al\emph{.~}tackle an impressive and large undertaking in this
+paper by attempting to disentangle global biodiversity trends through a
+meta-analysis of data from 358 studies. By dividing the available data
+by biome and taxa, the authors were able to detect different
+biodiversity trends in marine and terrestrial biomes. Tropical marine
+biomes, particularly the Caribbean, have a more negative deviation from
+the mean trend in species richness and more positive deviations from the
+overall trend in species turnover--species are turning over more quickly
+in marine biomes. The analyses demonstrate that mean local species
+richness is not decreasing, but many individual regions deviate
+significantly from the overall mean. The results have important
+implications for how we discuss changes in biodiversity in the
+anthropocene, but it is important to make clear that locally static
+species richness does not equate to globally static species richness,
+and species are going extinct at an alarming rate. Overall, this paper
+presents careful analyses and is clearly written, however, there are a
+few issues that, if addressed, we feel could improve future versions of
+the manuscript.~~
+
+\textbf{Major concerns:}
+
+\begin{itemize}
+\tightlist
+\item
+  The authors make excellent use of a public, curated time-series
+  database to facilitate this study. A major limitation in interpreting
+  the results is the uneven distribution of data across regions (33
+  marine biomes v. 10 terrestrial and 5 freshwater) and the gap in data
+  from tropical terrestrial ecosystems. It is feasible that inclusion of
+  tropical terrestrial systems would change the mean trend in local
+  species richness and eliminate the differential deviance between
+  marine and terrestrial biomes from the overall trend. While we
+  understand that including tropical terrestrial ecosystems in the
+  current analysis is probably not possible, we would appreciate more
+  discussion of both the cause and effects of this limitation. Why are
+  data unavailable for tropical terrestrial systems? Have they not been
+  collected or did they not meet the selection criteria for the
+  database? While selection criteria for the database is likely
+  discussed in the publication describing its initiation, it may be
+  helpful to readers to briefly describe how data was selected for
+  inclusion in the database and the current study.
+\item
+  The authors clearly state that baseline availability and selection is
+  a major issue in time-series studies and they did an impressively
+  thorough job in their sensitivity analyses examining the effect of
+  baseline selection on their results. Regardless, it is extremely
+  difficult to compare studies with such varied lengths as 2-95 years
+  and the length of the time series should affect the change in
+  biodiversity observed. While it would cause an undesired reduction in
+  data, we are curious if the authors considered pruning the data to
+  include studies that cover a minimum number of years within a
+  specified time period (e.g. at least 10 years of observations with at
+  least 1 observation before 1980). We are curious how many studies
+  would pass such filters and how it would affect the results.
+  Alternatively, baselines might be set to the mean richness in all
+  observations for a given time-series with changes in richness as the
+  difference from the mean rather than the difference from an earlier
+  observation. This method has been used to assess the impact of extreme
+  events, such as hurricanes, on community compositions.~
+\item
+  While ecologically fascinating that the mean local species richness is
+  not changing over time, it could easily be conflated with global
+  species richness remaining unchanged if the paper is not read
+  carefully. We are slightly concerned that non-specialist readers,
+  including the press, may interpret the results to mean that global
+  biodiversity is not decreasing and use the paper in rhetoric
+  challenging the reality of climate change. Lines 311-314 are paramount
+  to this work, and deserve potentially even more emphasis, but we feel
+  some treatment of the difference between the subject of the study
+  (changes in local species richness) and global extinction rate could
+  be useful. Despite the results presented here, climate change is
+  causing species extinction (?). If there are global species
+  richness/abundance data available, it could be helpful to include or
+  discuss them.
+\end{itemize}
+
+\textbf{Minor concerns:}
+
+\begin{itemize}
+\tightlist
+\item
+  The first paragraph of the discussion adeptly summarizes the most
+  important and interesting findings of this study. It may be helpful to
+  highlight this finding in the title.
+\item
+  In figures 2 and 4 the backgrounds of the individual density ridges
+  are opaque instead of transparent and therefore occlude other data and
+  the grey shading for the confidence interval. Figures 2 and 4 may be
+  more clear to readers if the biomes in panel a are sorted by
+  latitudinal band to match the sorting in panel b. Visually
+  distinguishing realms in panel a could also be improved. Several
+  members of our group initially thought it was a mistake that the space
+  next to ``marine'' in the Realm legend was blank. Authors may consider
+  distinguishing realms with 3 more distinct line types.
+\item
+  In figure 5, panel b, we believe that the color should be set to
+  discrete rather than continuous. Our interpretation of the description
+  of these results calls for 2 shades of blue and 2 shades of green, but
+  there appear to be 3+ shades of blue and green.
+\item
+  On line 69, ``reliable'' should be ``reliably.''
+\item
+  We found it extremely interesting that the overall trend in
+  biodiversity loss was not significantly different than zero. It is
+  absolutely fascinating that while global biodiversity is decreasing,
+  local biodiversity is essentially remaining the same due to species
+  turnover. We would love to hear more of the authors interpretation
+  possible consequences. We are especially curious about what these
+  results may mean for ecosystem function over time. Do the authors feel
+  that that ecosystem function will be maintained even in an era of
+  extinction due to this turnover effect?~~
+\end{itemize}
+
+It was a great pleasure reading this interesting and exciting work and
+we are extremely grateful to the authors for posting it as a preprint on
+bioRxiv and for their obvious commitment to open, reproducible science.
+In addition to most of the data used in this paper being available in a
+public data base, the code for the analyses is extremely well commented
+and available on Zenodo. Meta-analyses like this, while difficult, are
+absolutely necessary to illuminate larger ecological trends, and we
+thoroughly appreciate the effort made here.~We sincerely hope that our
+comments are useful to the authors and we look forward to reading the
+final version when it is published.~
+
+Very best wishes,
+
+The OIST Ecology and Evolution Preprint Journal Club
+
+\par\null
+
+\selectlanguage{english}
+\FloatBarrier
+\end{document}
+
