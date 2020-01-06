@@ -4,6 +4,7 @@ const yaml = require("js-yaml");
 const crypto = require("crypto");
 
 const sources = "sources";
+const dist = "authorea";
 
 const getPublicationHtml = publication =>
   new Promise((resolve, reject) => {
@@ -87,8 +88,8 @@ const hashString = string =>
     .digest("hex");
 
 const start = async () => {
-  fs.rmdirSync("dist", { recursive: true });
-  fs.mkdirSync("dist");
+  fs.rmdirSync(dist, { recursive: true });
+  fs.mkdirSync(dist);
 
   const output = await Promise.all(
     fs.readdirSync(sources).map(getPublicationHtml)
@@ -100,12 +101,12 @@ const start = async () => {
       const parsedHtml = cleanupHtml(html);
       const escapedHtml = escapeHtml(parsedHtml);
       const hashedName = hashString(publication);
-      fs.writeFileSync(`dist/${hashedName}.html`, parsedHtml);
-      fs.writeFileSync(`dist/${hashedName}_source.html`, escapedHtml);
+      fs.writeFileSync(`${dist}/${hashedName}.html`, parsedHtml);
+      fs.writeFileSync(`${dist}/${hashedName}_source.html`, escapedHtml);
     });
 
   fs.writeFileSync(
-    `dist/index.html`,
+    `${dist}/index.html`,
     `
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></style>
       <div class="container-fluid" style="margin-top: 20px">
