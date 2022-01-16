@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fine Arts</title>
+        <meta name="description" content="A collection of fine arts">
+        <link id="favicon" rel="icon" type="image/png"/>
+
+        <style>
+            body {
+                background-size: 20px 20px;
+                background-color: #ffffff;
+                background-position: 0 0, 10px 10px;
+                background-image:  radial-gradient(#000000 0.5px, transparent 0.5px), radial-gradient(#000000 0.5px, #ffffff 0.5px);
+            }
+
+            #canvas {
+                top:0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                padding: 2vw;
+                background: white;
+                position: absolute;
+                border-style: solid;
+                border-width: 4vw;
+                border-top-color: #333333;
+                border-right-color: black;
+                border-bottom-color: #333333;
+                border-left-color: black;
+                box-shadow: 15px 15px 20px rgba(0,0,0,.4);
+
+                width: calc(100% - 12vw - 60px);
+                max-height: 800px;
+                max-width: 800px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        ░░░░░░░░▄▄▄███░░░░░░░░░░░░░░░░░░░░
+        ░░░▄▄██████████░░░░░░░░░░░░░░░░░░░
+        ░███████████████░░░░░░░░░░░░░░░░░░
+        ░▀███████████████░░░░░▄▄▄░░░░░░░░░
+        ░░░███████████████▄███▀▀▀░░░░░░░░░
+        ░░░░███████████████▄▄░░░░░░░░░░░░░
+        ░░░░▄████████▀▀▄▄▄▄▄░▀░░░░░░░░░░░░
+        ▄███████▀█▄▀█▄░░█░▀▀▀░█░░▄▄░░░░░░░
+        ▀▀░░░██▄█▄░░▀█░░▄███████▄█▀░░░▄░░░
+        ░░░░░█░█▀▄▄▀▄▀░█▀▀▀█▀▄▄▀░░░░░░▄░▄█
+        ░░░░░█░█░░▀▀▄▄█▀░█▀▀░░█░░░░░░░▀██░
+        ░░░░░▀█▄░░░░░░░░░░░░░▄▀░░░░░░▄██░░
+        ░░░░░░▀█▄▄░░░░░░░░▄▄█░░░░░░▄▀░░█░░
+        ░░░░░░░░░▀███▀▀████▄██▄▄░░▄▀░░░░░░
+        ░░░░░░░░░░░█▄▀██▀██▀▄█▄░▀▀░░░░░░░░
+        ░░░░░░░░░░░██░▀█▄█░█▀░▀▄░░░░░░░░░░
+        ░░░░░░░░░░█░█▄░░▀█▄▄▄░░█░░░░░░░░░░
+        ░░░░░░░░░░█▀██▀▀▀▀░█▄░░░░░░░░░░░░░
+        ░░░░░░░░░░░░▀░░░░░░░░░░░▀░░░░░░░░░
+        -->
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <script>
+            const gen = document.querySelector("#generate");
+            const dwl = document.querySelector("#download");
+            const cvs = document.querySelector("#canvas");
+            const fav = document.querySelector("#favicon");
+
+            const ctx = cvs.getContext("2d");
+
+            const gs = 12;
+            const wu = (i) => (i * cvs.width) / gs;
+            const hu = (i) => (i * cvs.height) / gs;
+
+            let hst = [];
+
+            const shapes = {
+                rect: (x, y, w, h) => ctx.rect(wu(x), hu(y), wu(w), hu(h)),
+                disc: (x, y, w, h) => ctx.arc(wu(x) + wu(w) * 0.5, hu(y) + hu(h) * 0.5, Math.min(wu(w), wu(h)) * 0.5, 0, Math.PI * 2),
+            };
+
+            const clrsr = (x, y, w, h) => ctx.clearRect(wu(x), hu(y), wu(w), hu(h));
+            const v = (min, max, step = 0.5) => Math.round(Math.random() * (max - min) + min / step) * step;
+            const c = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            const s = (i, c = Object.keys(shapes)) => (i < 0 ? c[v(0, c.length - 1, 1)] : c[i]);
+
+            const shape = (x, y, w, h, c, s) => {
+                ctx.beginPath();
+                ctx.fillStyle = c;
+                shapes[s](x, y, w, h);
+                ctx.fill();
+                return [x, y, w, h, c, s];
+            };
+
+            const generate = async () => {
+                hst = [];
+                clrsr(0.0, 0.0, 12.0, 12.0);
+                //-------xCoord----------|--yCoord------|--width--------|--height---|--color---|--shape------|
+                hst.push(shape(0.0,         0.0,           12.0,           12.0,       c(),       s(0)));      // background
+                hst.push(shape(v(1.0, 1.5), v(1.0, 1.0),   v(10.0, 10.0), v(8.0, 8.0), c(),       s(-1)));     // head
+                hst.push(shape(v(0.5, 3.5), v(2.5, 3.5),   v(3.0, 3.0),   v(3.0, 3.0), c(),       s(-1)));     // eye 1
+                hst.push(shape(v(5.5, 8.0), v(2.5, 3.5),   v(3.0, 3.0),   v(3.0, 3.0), hst[2][4], hst[2][5])); // eye 2
+                hst.push(shape(v(2.0, 8.0), v(6.0, 8.0),   v(2.0, 4.0),   v(1.0, 2.0), c(),       s(-1)));     // mouth
+                hst.push(shape(v(4.0, 5.0), v(9.0, 9.0),   v(3.0, 5.0),   v(1.0, 1.0), hst[1][4], s(0)));      // neck
+                hst.push(shape(v(2.0, 2.0), v(10.0, 10.0), v(8.0, 9.0),   v(2.0, 2.0), c(),       s(0)));      // shirt
+
+                fav.setAttribute("href", cvs.toDataURL());
+            };
+
+            cvs.addEventListener("click", generate);
+            generate();
+        </script>
+  </body>
+</html>

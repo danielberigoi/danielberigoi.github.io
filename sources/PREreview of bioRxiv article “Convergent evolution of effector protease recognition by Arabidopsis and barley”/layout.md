@@ -1,4 +1,0 @@
-abstract.html
-sherr3oku28.html
-figures/AvrPphBcatalytically-inactive-705x705
-ijnk5e9hbb8.html
