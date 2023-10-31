@@ -1,0 +1,1 @@
+import{s as o,c as r}from"./store-c6a84c78.js";import"./index-f6239866.js";function a(){o(),document.removeEventListener(t,e),document.addEventListener(t,e)}function e(){confirm("Are you sure you want to reset all saved data?")&&r()}const t="reset-store";export{a as init};
