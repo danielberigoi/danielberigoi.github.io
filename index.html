@@ -63,13 +63,13 @@
         ctx.clearRect(0, 0, cvs.width, cvs.height);
 
         // ----- x ------ | ------ y ----- | ----- w ------ | ----- h ------ | color | shape |
-        draw(rnd(0.0, 0.0), rnd(0.0, 0.0), rnd(grSz, grSz), rnd(grSz, grSz), col(), shp(0.0)); // background
-        draw(rnd(1.0, 1.5), rnd(1.0, 1.0), rnd(10.0, 10.0), rnd(8.0, 8.0), skCol, shp(-1)); // head
-        draw(rnd(0.5, 3.5), rnd(2.5, 3.5), rnd(3.0, 3.0), rnd(3.0, 3.0), eyCol, eyShp); // eye 1
-        draw(rnd(5.5, 8.0), rnd(2.5, 3.5), rnd(3.0, 3.0), rnd(3.0, 3.0), eyCol, eyShp); // eye 2
-        draw(rnd(2.0, 8.0), rnd(6.0, 8.0), rnd(2.0, 4.0), rnd(1.0, 2.0), col(), shp(-1)); // mouth
-        draw(rnd(4.0, 5.0), rnd(9.0, 9.0), rnd(3.0, 5.0), rnd(1.0, 1.0), skCol, shp(0.0)); // neck
-        draw(rnd(2.0, 2.0), rnd(10.0, 10.0), rnd(8.0, 9.0), rnd(2.0, 2.0), col(), shp(0.0)); // body
+        draw(rnd(0.0, 0.0), rnd(0.00, 0.00), rnd(grSz, grSz), rnd(grSz, grSz), col(), shp(.0)); // background
+        draw(rnd(1.0, 1.5), rnd(1.00, 1.00), rnd(10.0, 10.0), rnd(8.00, 8.00), skCol, shp(-1)); // head
+        draw(rnd(0.5, 3.5), rnd(2.50, 3.50), rnd(3.00, 3.00), rnd(3.00, 3.00), eyCol, eyShp);   // eye 1
+        draw(rnd(5.5, 8.0), rnd(2.50, 3.50), rnd(3.00, 3.00), rnd(3.00, 3.00), eyCol, eyShp);   // eye 2
+        draw(rnd(2.0, 8.0), rnd(6.00, 8.00), rnd(2.00, 4.00), rnd(1.00, 2.00), col(), shp(-1)); // mouth
+        draw(rnd(4.0, 5.0), rnd(9.00, 9.00), rnd(3.00, 5.00), rnd(1.00, 1.00), skCol, shp(.0)); // neck
+        draw(rnd(2.0, 2.0), rnd(10.0, 10.0), rnd(8.00, 9.00), rnd(2.00, 2.00), col(), shp(.0)); // body
 
         fav.setAttribute("href", cvs.toDataURL());
       };
